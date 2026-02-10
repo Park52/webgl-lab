@@ -4,6 +4,7 @@ import { registerRoutes, startRouter } from "./router";
 import { renderHome } from "./pages/home";
 import { renderTriangle01 } from "./pages/triangle01";
 import { renderTransform01 } from "./pages/transform01";
+import { renderTexture01 } from "./pages/texture01";
 import { renderProjection01 } from "./pages/projection01";
 
 function renderNotFound(container: HTMLElement): void {
@@ -27,6 +28,7 @@ function bootstrap(): void {
       { path: "#/", render: renderHome },
       { path: "#/triangle01", render: renderTriangle01 },
       { path: "#/transform01", render: renderTransform01 },
+      { path: "#/texture01", render: renderTexture01 },
       { path: "#/projection01", render: renderProjection01 },
     ],
     outlet,

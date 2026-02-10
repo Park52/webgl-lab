@@ -166,6 +166,48 @@ canvas.gl-canvas {
   font-size: 0.85rem;
 }
 
+/* ── Control Panel ── */
+.ctrl-panel {
+  margin-top: 16px;
+}
+
+.ctrl-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.ctrl-label {
+  min-width: 110px;
+  font-size: 0.85rem;
+  color: var(--c-text-dim);
+}
+
+.ctrl-select {
+  flex: 1;
+  padding: 5px 10px;
+  font-size: 0.82rem;
+  color: var(--c-text);
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+.ctrl-select:focus {
+  border-color: var(--c-accent);
+}
+
+.ctrl-value {
+  min-width: 52px;
+  text-align: right;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--c-text);
+}
+
 /* ── Not Found ── */
 .not-found {
   text-align: center;
