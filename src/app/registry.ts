@@ -16,6 +16,11 @@ export const labs: LabMeta[] = [
     path: "#/transform01",
   },
   {
+    title: "Texture01",
+    description: "이미지 텍스처 로딩과 UV 매핑. Filter·Wrap·Flip 파라미터 실습.",
+    path: "#/texture01",
+  },
+  {
     title: "Projection01",
     description: "직교·투영 행렬을 사용한 카메라 투영 기초.",
     path: "#/projection01",
