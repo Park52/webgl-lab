@@ -6,6 +6,7 @@ import { renderTriangle01 } from "./pages/triangle01";
 import { renderTransform01 } from "./pages/transform01";
 import { renderTexture01 } from "./pages/texture01";
 import { renderProjection01 } from "./pages/projection01";
+import { renderSphere01 } from "./pages/sphere01";
 
 function renderNotFound(container: HTMLElement): void {
   container.innerHTML = `
@@ -30,6 +31,7 @@ function bootstrap(): void {
       { path: "#/transform01", render: renderTransform01 },
       { path: "#/texture01", render: renderTexture01 },
       { path: "#/projection01", render: renderProjection01 },
+      { path: "#/sphere01", render: renderSphere01 },
     ],
     outlet,
     renderNotFound,

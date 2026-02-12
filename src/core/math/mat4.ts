@@ -66,6 +66,44 @@ export function scaling(sx: number, sy: number, sz: number = 1): Mat4 {
   return m;
 }
 
+/** Create a rotation matrix around the Y axis (angle in radians). */
+export function rotationY(rad: number): Mat4 {
+  const c = Math.cos(rad);
+  const s = Math.sin(rad);
+  const m = identity();
+  m[0] = c;
+  m[2] = -s;
+  m[8] = s;
+  m[10] = c;
+  return m;
+}
+
+/**
+ * Create a perspective projection matrix.
+ * @param fovY  vertical field-of-view in radians
+ * @param aspect  width / height
+ * @param near  near clipping plane (> 0)
+ * @param far   far clipping plane (> near)
+ */
+export function perspective(
+  fovY: number,
+  aspect: number,
+  near: number,
+  far: number,
+): Mat4 {
+  const m = new Float32Array(16);
+  const f = 1 / Math.tan(fovY / 2);
+  const nf = 1 / (near - far);
+
+  m[0] = f / aspect;
+  m[5] = f;
+  m[10] = (far + near) * nf;
+  m[11] = -1;
+  m[14] = 2 * far * near * nf;
+  // m[15] = 0  (already 0)
+  return m;
+}
+
 /**
  * Create an orthographic projection matrix.
  * Maps (left..right, bottom..top, near..far) → NDC (-1..1).
