@@ -25,4 +25,9 @@ export const labs: LabMeta[] = [
     description: "직교·투영 행렬을 사용한 카메라 투영 기초.",
     path: "#/projection01",
   },
+  {
+    title: "Sphere01",
+    description: "Lat/Lon 구 메쉬 생성, UV 텍스처 매핑, 인덱스 드로우, MVP 행렬 회전.",
+    path: "#/sphere01",
+  },
 ];
